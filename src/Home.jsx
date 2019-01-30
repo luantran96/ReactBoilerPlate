@@ -24,7 +24,7 @@ class Home extends React.Component {
           >welcome</div>
         )}
         </Motion>
-        <div className="down-button"><svg><path className="down-arrow" d="M0 40 L30 72 L60 40"></path></svg> </div>
+        <div className="down-button"> </div>
       </div>
     );
   }
