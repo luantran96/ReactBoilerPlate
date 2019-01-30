@@ -1,5 +1,7 @@
 import React from 'react';
-
+import About from './About.jsx';
+import Home from './Home.jsx';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,7 +12,8 @@ class App extends React.Component {
   render() {
     return (
       <div id="body">
-        <div>HELLO WORLD</div>
+      <Home />
+      <About />
       </div>
     );
   }
