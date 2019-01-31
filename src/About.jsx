@@ -30,9 +30,7 @@ class About extends React.Component {
   }
 
   render() {
-
     let { renderText } = this.state;
-
     const SVG = (
       <svg version="1.1" id="Calque_2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 635.3 844.6" enableBackground="new 0 0 635.3 844.6">
       <path id="z0" fill="none" stroke="#010202" strokeWidth="20" strokeLinejoin="round" strokeMiterlimit="10" d="M259.3,834.6
@@ -69,6 +67,11 @@ class About extends React.Component {
                 </p>
 
               </div>
+            <div id="footer">
+              <a href="http://github.com/luantran96/"><img src="./github.png" /></a>
+              <a href="https://www.linkedin.com/in/luanptran/"><img src="./linkedin.png" /></a>
+              <a href="#"><img src="./resume.png" /></a>
+            </div>
           </div>
         </div>
       }

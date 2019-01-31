@@ -59,7 +59,6 @@ class Home extends React.Component {
         </div>
       )}
       </StaggeredMotion>
-      {/* <div className="down-button"> </div> */}
     </div>
     }
     </Motion>
