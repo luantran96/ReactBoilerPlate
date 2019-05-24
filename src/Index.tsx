@@ -1,6 +1,6 @@
-import React from 'react';
-import reactDOM from 'react-dom';
-import App from './App';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { App } from './App';
 
 
-reactDOM.render(<App />, document.getElementById('app')); 
+ReactDOM.render(<App compiler="TypeScript" framework="React" />, document.getElementById('app')); 

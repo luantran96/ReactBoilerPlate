@@ -10,22 +10,26 @@ module.exports = {
     filename: '[name].js',
     path: DIST_DIR,
   },
+  devtool: "source-map",
   resolve: {
-    extensions: ['.tsx', '.js', '.ts']
+    extensions: ['.tsx', '.js', '.ts', '.json']
   },
   module: {
-    rules: [
-      {
-        test: /\.tsx?/,
+    rules: [{
+        test: /\.tsx?$/,
         include: [SRC_DIR],
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: 'awesome-typescript-loader',
         options: {
           presets: ['@babel/preset-typescript', '@babel/preset-react', '@babel/preset-env'],
           plugins: ['@babel/plugin-proposal-class-properties'],
         },
       },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'source-map-loader'
+      }
     ]
   }
 }
-

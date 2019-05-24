@@ -1,6 +1,20 @@
-import React from "react";
+import * as React from "react";
 
-class App extends React.Component {
+export interface HelloProps {
+  compiler: string;
+  framework: string;
+}
+
+/*
+
+  *********************************************
+  First argument is to define types for props
+  Second Argument is to define types for states
+  *********************************************
+  
+*/
+
+export class App extends React.Component<HelloProps, { loading: boolean }> {
   state = { loading: true };
 
   toggle = () => {
@@ -12,12 +26,10 @@ class App extends React.Component {
       <div id="body">
         <div>
           <button onClick={this.toggle} type="button">
-            {this.state.loading ? "ON" : "OFF"}
+            {this.state.loading ? "ON" : "OFF"} 
           </button>
         </div>
       </div>
     );
   }
 }
-
-export default App;
