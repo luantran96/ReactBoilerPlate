@@ -83,8 +83,12 @@ class About extends React.Component {
               {SVG}
               <div id="about-text1">
                 <span className="text-light">About me</span>
-                <p></p>
-                <p>Software developer who dreams in Javascript</p>
+                <ul>
+                  <li>Dreams in Javascript</li>
+                  <li>Tackles any challenge at hand</li>
+                  <li>Eats literally anything</li>
+                  <li>Aspiring bedroom DJ</li>
+                </ul>
               </div>
               <div>
                 <p>
@@ -201,7 +205,7 @@ class About extends React.Component {
                 <p>
                   <span className="text-bold-normal">Deployment:</span>
                 </p>
-                 <div className="skill-row">
+                <div className="skill-row">
                   <div>
                     <img
                       class="img"
@@ -226,7 +230,6 @@ class About extends React.Component {
                     />
                     <div className="skill-text">Heroku</div>
                   </div>
-                 
                 </div>
               </div>
             </div>
