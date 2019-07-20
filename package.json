@@ -1,37 +1,43 @@
 {
-  "name": "personal_website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build:dev": "webpack -d --watch",
-    "build:start": "nodemon server/index.js",
-    "start": "node server/index.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.5",
-    "cors": "^2.8.5",
-    "express": "^4.16.4",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-motion": "^0.5.2",
-    "react-router-dom": "^4.3.1",
-    "react-transition-group": "^2.5.3",
-    "sass": "^1.16.1",
-    "webpack": "^4.29.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "eslint": "^5.12.1",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.0",
-    "eslint-plugin-react": "^7.12.4",
-    "nodemon": "^1.18.9",
-    "webpack-cli": "^3.2.1"
-  }
+	"name": "personal_website",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build:dev": "webpack -d --watch",
+		"build:start": "nodemon server/index.js",
+		"start": "node server/index.js",
+		"prettier": "prettier --write --single-quote --trailing-comma all \"{src/app,__{tests,mocks}__}/**/*.{jsx,ts}\""
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@babel/plugin-proposal-class-properties": "^7.5.5",
+		"@babel/preset-env": "^7.3.1",
+		"@babel/preset-react": "^7.0.0",
+		"babel-loader": "^8.0.5",
+		"cors": "^2.8.5",
+		"express": "^4.16.4",
+		"particles.js": "^2.0.0",
+		"react": "^16.7.0",
+		"react-dom": "^16.7.0",
+		"react-motion": "^0.5.2",
+		"react-particles-js": "^2.6.0",
+		"react-router-dom": "^4.3.1",
+		"react-transition-group": "^2.5.3",
+		"react-typed": "^1.1.2",
+		"sass": "^1.16.1",
+		"typed.js": "^2.0.10",
+		"webpack": "^4.29.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.2.2",
+		"eslint": "^5.12.1",
+		"eslint-config-airbnb": "^17.1.0",
+		"eslint-plugin-import": "^2.16.0",
+		"eslint-plugin-jsx-a11y": "^6.2.0",
+		"eslint-plugin-react": "^7.12.4",
+		"nodemon": "^1.18.9",
+		"webpack-cli": "^3.2.1"
+	}
 }
