@@ -1,9 +1,19 @@
+@font-face {
+	font-family: 'DINPro-Light';
+	src: url('./fonts/DINPro-Light_13935.ttf');
+}
+
+@font-face {
+	font-family: 'DINPro-Bold';
+	src: url('./fonts/DINPro\ Bold.otf');
+}
+
 body,
 html {
 	width: 100%;
 	background: rgb(34, 34, 34);
 	color: white;
-	font-family: 'Raleway', serif;
+	font-family: 'DINPro-Light', serif;
 	font-weight: normal;
 	display: flex;
 	scroll-behavior: smooth;
@@ -16,22 +26,17 @@ html {
 }
 
 #about {
-	width: 98%;
+	width: 90%;
 }
 
 hr {
 	width: 40%;
 }
 
-.about-content1-left-block {
-	/* display: flex;
-	flex-direction: column;
-	justify-content: space-around; */
+a {
+	color: grey;
+	text-decoration: none;
 }
-
-/* .about-content1-left-block > div {
-	flex: 1;
-} */
 
 .down-button {
 	width: 80px;
@@ -46,7 +51,7 @@ hr {
 
 .particle-container {
 	position: absolute;
-	right: 0;
+	right: 82px;
 	top: 0;
 }
 
@@ -64,10 +69,12 @@ hr {
 .skill-row {
 	display: flex;
 	width: 100%;
+	margin-top: -12px;
 }
 
 #about-content1 img {
-	width: 90px;
+	height: 50px;
+	width: 50px;
 	margin: 10px 20px;
 }
 
@@ -92,8 +99,11 @@ hr {
 
 #about-text1 {
 	margin-top: 100px;
-	margin-left: 50px;
 	position: relative;
+}
+
+.skill-row-header {
+	margin: 0.4em;
 }
 
 #about-text {
@@ -103,7 +113,6 @@ hr {
 	max-width: 800px;
 	height: 50%;
 	font-size: 25px;
-	color: #1c1e26;
 }
 
 #body {
@@ -123,7 +132,11 @@ hr {
 }
 
 .margin-t {
-	margin-top: 5px;
+	margin-top: 10px;
+}
+
+.size-m {
+	font-size: 35px;
 }
 
 .size-xxl {
@@ -131,12 +144,12 @@ hr {
 }
 
 .text-bold {
-	font-weight: bold;
+	font-family: 'DINPro-Bold';
 }
 
 .text-bold-normal {
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 15px;
 }
 
 #Calque_2 {
@@ -163,17 +176,26 @@ hr {
 	width: 100%;
 }
 
-#footer {
-	display: flex;
-	justify-content: space-evenly;
-	position: absolute;
-	left: auto;
-	bottom: 0;
-	width: 300px;
+.job-title {
+	background: white;
+	color: black;
+	max-width: 381px;
+	font-size: 18px;
+	padding: 3px;
+	margin-top: 0;
+}
+
+.contact {
+	clear: left;
+	padding: 30px 0;
+	max-width: 600px;
+	font-size: 15px;
+	line-height: 1.4em;
 }
 
 #footer,
 #footer > a > img {
+	width: 50px;
 	height: 50px;
 }
 
