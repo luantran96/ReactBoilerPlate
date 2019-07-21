@@ -11,6 +11,7 @@
 body,
 html {
 	width: 100%;
+	height: 100%;
 	background: rgb(34, 34, 34);
 	color: white;
 	font-family: 'DINPro-Light', serif;
@@ -176,13 +177,21 @@ a {
 	width: 100%;
 }
 
+.about-content1-left-block {
+	height: 1000px;
+}
+
+.to-render {
+	opacity: 0;
+}
+
 .job-title {
-	background: white;
-	color: black;
-	max-width: 381px;
+	width: 0;
+	height: 25px;
 	font-size: 18px;
 	padding: 3px;
-	margin-top: 0;
+	background: #FFF;
+	color: black;
 }
 
 .contact {

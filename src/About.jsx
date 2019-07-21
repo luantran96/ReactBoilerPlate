@@ -1,5 +1,6 @@
 import React from 'react';
 import Typed from 'react-typed';
+import anime from 'animejs';
 import Particles from './Particles.jsx';
 
 class About extends React.Component {
@@ -7,14 +8,16 @@ class About extends React.Component {
 		super(props);
 
 		this.state = {
+      render: false,
 			renderText: false,
 		};
 
+    this.ref = React.createRef();
 		this.handleScroll = this.handleScroll.bind(this);
 	}
 
 	handleScroll() {
-		let y = window.pageYOffset;
+		const y = window.pageYOffset;
 
 		if (y >= 4) {
 			this.setState({ renderText: true });
@@ -26,43 +29,61 @@ class About extends React.Component {
 	}
 
 	componentDidMount() {
-		window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
+    anime({
+      targets: this.ref.current,
+      width: '381px',
+      easing: 'easeInOutQuad',
+      duration: 1500,
+      complete: () => {
+        this.ref.current.innerText = 'SOFTWARE ENGINEER @ PwC NEW VENTURES';
+        this.setState({ render: true });
+
+        anime({
+          targets: '.to-render',
+          opacity: 1,
+          easing: 'easeInOutQuad',
+          duration: 500,
+        });
+      }
+    });
+
 	}
 
 	render() {
-		let { renderText } = this.state;
+    let { render } = this.state;
+    
+
 
 		return (
 			<>
-				<Particles />
 				<div id='about'>
 					<div id='about-content1'>
-						<div className='about-content1-left-block'>
+						 <div className='about-content1-left-block'>
 							<div id='about-text1'>
 								<span className='text-bold size-xxl'>
 									LUAN TRAN
-								</span>
-								<div className='job-title'>
-									SOFTWARE ENGINEER @ PwC NEW VENTURES
+								</span>  	
+                <div ref={this.ref} className='job-title'>		
 								</div>
-								<div className='margin-t'>
+								{render && <div className="to-render"> <div className='margin-t'>
 									<span className='size-xxl'>
 										{' '}
-										I love to{' '}
+										I love to {' '}
 									</span>
 									<span className='size-xxl'>
 										<Typed
-											strings={[' code', 'break code']}
+											strings={[' code.', 'break code.']}
 											typeSpeed={40}
 											backSpeed={40}
 											backDelay={1000}
 											loop
 										/>
 									</span>
-								</div>
+               </div> </div> } 
 							</div>
-							<div class='about-text2'>
-								<p class='skill-row-header'>
+							{render && <div className="to-render"> <div className='about-text2'>
+								<p className='skill-row-header'>
 									<span className='text-bold-normal'>
 										Front End:
 									</span>
@@ -125,7 +146,7 @@ class About extends React.Component {
 										</div>
 									</div>
 								</div>
-								<p class='skill-row-header'>
+								<p className='skill-row-header'>
 									<span className='text-bold-normal'>
 										Back End:
 									</span>
@@ -256,8 +277,8 @@ class About extends React.Component {
 										<div className='skill-text'>Heroku</div>
 									</div>
 								</div>
-							</div>
-							<p class='contact'>
+							</div> </div> }
+							{render && <div className="to-render"><p class='contact'>
 								You can contact me at{' '}
 								<a
 									href='mailto:luan.p.tran@gmail.com'
@@ -278,41 +299,13 @@ class About extends React.Component {
 									href='http://github.com/luantran96/'
 								>
 									Github.
-								</a>
-							</p>
-						</div>
-						<div className='about-content1-right-block' />
+								</a> 
+                </p> </div>}   
+						</div> 
+						<div className='about-content1-right-block'>
+              <Particles />
+            </div>  
 					</div>
-
-					{/* <div id='about-content2'>
-						<div id='about-text'>
-							<span className='text-bold'>Projects</span>
-							<p>
-								"Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation
-								ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in
-								reprehenderit in voluptate velit esse cillum
-								dolore eu fugiat nulla pariatur. Excepteur sint
-								occaecat cupidatat non proident, sunt in culpa
-								qui officia deserunt mollit anim id est
-								laborum."
-							</p>
-						</div>
-						<div id='footer'>
-						<a href='http://github.com/luantran96/'>
-							<img src='./github.png' />
-						</a>
-						<a href='https://www.linkedin.com/in/luanptran/'>
-							<img src='./linkedin.png' />
-						</a>
-						<a href='#'>
-							<img src='./resume.png' />
-						</a>
-					</div>
-					</div> */}
 				</div>
 			</>
 		);
