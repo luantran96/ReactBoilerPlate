@@ -2,6 +2,8 @@ import React from 'react';
 import Typed from 'react-typed';
 import anime from 'animejs';
 import Particles from './Particles.jsx';
+import Projects from './Projects.jsx';
+
 
 class About extends React.Component {
 	constructor(props) {
@@ -52,9 +54,6 @@ class About extends React.Component {
 
 	render() {
     let { render } = this.state;
-    
-
-
 		return (
 			<>
 				<div id='about'>
@@ -173,7 +172,7 @@ class About extends React.Component {
 										</div>
 									</div>
 								</div>
-								<p class='skill-row-header'>
+								<p className='skill-row-header'>
 									<span className='text-bold-normal'>
 										Database:
 									</span>
@@ -302,11 +301,12 @@ class About extends React.Component {
 								</a> 
                 </p> </div>}   
 						</div> 
-						<div className='about-content1-right-block'>
+						{/* <div className='about-content1-right-block'>
+            </div>   */}
               <Particles />
-            </div>  
 					</div>
 				</div>
+				<Projects />
 			</>
 		);
 	}
