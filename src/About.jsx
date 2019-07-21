@@ -218,7 +218,7 @@ class About extends React.Component {
 											alt='Jenkins'
 										/>
 										<div className='skill-text'>
-											styled components
+											Jenkins
 										</div>
 									</div>
 									<div className='skill'>

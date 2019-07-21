@@ -26,7 +26,7 @@ class Canvas extends Component {
 						},
 						line_linked: {
 							enable: true,
-							distance: 30,
+							distance: 40,
 							opacity: 0.4,
 						},
 						move: {
