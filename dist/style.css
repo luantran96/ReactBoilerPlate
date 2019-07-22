@@ -46,7 +46,7 @@ a {
 	height: 50px;
 	border-bottom-left-radius: 100px;
 	border-bottom-right-radius: 100px;
-	background-color: #1c1e26;
+	background-color: #1c1e26;	
 	position: absolute;
 	left: 49%;
 	bottom: -4.3%;
@@ -56,6 +56,12 @@ a {
 	position: absolute;
 	right: 82px;
 	top: 0;
+}
+
+.particle-snow-container {
+	position: absolute;
+	left: 0;
+	top: 0;	
 }
 
 #about-content1 {
@@ -76,10 +82,16 @@ a {
 	margin-top: -12px;
 }
 
-#about-content1 img {
-	height: 50px;
-	width: 50px;
+.skill img {
+	height: 100px;
+	width: 100px;
 	margin: 10px 20px;
+}
+
+.experiences, .skills {
+	width: 90%;
+	height: 1000px;
+	padding: 1.5em;
 }
 
 .skill-text {
@@ -102,7 +114,6 @@ a {
 }
 
 #about-text1 {
-	margin-top: 5%;
 	position: relative;
 }
 
@@ -152,17 +163,11 @@ a {
 }
 
 .text-bold-normal {
+	font-family: 'DINPro-Bold';
 	font-weight: bold;
 	font-size: 15px;
 }
 
-#Calque_2 {
-	width: 40%;
-	height: 45%;
-	position: relative;
-	left: -15%;
-	top: 35%;
-}
 #header > div {
 	height: auto;
 	width: 300px;
@@ -182,7 +187,7 @@ a {
 
 .about-content1-left-block {
 	margin: auto;
-	height: 1000px;
+	/* height: 1000px; */
 }
 
 .to-render {
@@ -229,6 +234,7 @@ a {
 }
 
 .projects {
+	position: relative;
 	width: 90%;
 	height: 1000px;
 	padding: 1.5em;
