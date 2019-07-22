@@ -301,8 +301,6 @@ class About extends React.Component {
 								</a> 
                 </p> </div>}   
 						</div> 
-						{/* <div className='about-content1-right-block'>
-            </div>   */}
               <Particles />
 					</div>
 				</div>

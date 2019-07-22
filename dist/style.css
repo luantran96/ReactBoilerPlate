@@ -249,6 +249,8 @@ a {
 
 .card-image {
 	position: relative;
+	width: 400px;
+	height: 200px;
 }
 
 .card .card-image img {
