@@ -17,8 +17,8 @@ class Canvas extends Component {
     const { width, height } = this.state;
     return (
       <Particles
-        width= {width}
-        height= {height}
+        width={width}
+        height={height}
         className="particle-snow-container"
         params={{
           particles: {
@@ -128,7 +128,7 @@ class Canvas extends Component {
               },
             },
           },
-          retina_detect: true,
+          retina_detect: false,
         }}
       />
     );

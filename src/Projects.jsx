@@ -1,9 +1,11 @@
-import React from 'react';
-import Projectitem from './ProjectItem.jsx';
-import ParticlesSnow from './ParticlesSnow.jsx';
+import React, { useState } from 'react';
+import Projectitem from './ProjectItem';
+import ParticlesSnow from './ParticlesSnow';
+import Modal from 'react-responsive-modal';
 
 export default class Projects extends React.Component {
   state = {
+    showModal: false,
     projects: [
       {
         name: 'Eaten.',
@@ -15,18 +17,37 @@ export default class Projects extends React.Component {
     ],
   };
 
+  onOpenModal = () => {
+    this.setState({ showModal: true });
+  };
+
+  onCloseModal = () => {
+    this.setState({ showModal: false });
+  };
+
   renderProjects = () => {
     return this.state.projects.map(proj => {
-      return <Projectitem project={proj} />;
+      return (
+        <div onClick={this.onOpenModal}>
+          <Projectitem project={proj} />
+        </div>
+      );
     });
   };
 
   render() {
+    const { showModal } = this.state;
+
     return (
       <div className="projects">
         <ParticlesSnow />
         <h1>PROJECTS</h1>
         <div className="projects-content">{this.renderProjects()}</div>
+        <Modal open={showModal} onClose={this.onCloseModal} center>
+          <div className="font-black modal-content">
+            <h2> Simple centered modal </h2>
+          </div>
+        </Modal>
       </div>
     );
   }

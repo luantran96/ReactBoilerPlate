@@ -1,10 +1,11 @@
 import React from 'react';
 import Typed from 'react-typed';
 import anime from 'animejs';
-import Particles from './Particles.jsx';
-import Projects from './Projects.jsx';
-import Skills from './Skills.jsx';
-import Experiences from './Experiences.jsx';
+import Particles from './Particles';
+import Projects from './Projects';
+import Skills from './Skills';
+import Footer from './Footer';
+import Experiences from './Experiences';
 
 class About extends React.Component {
   constructor(props) {
@@ -63,7 +64,7 @@ class About extends React.Component {
                 <span className="text-bold size-xxl">LUAN TRAN</span>
                 <div ref={this.ref} className="job-title"></div>
                 <div className="margin-t to-render">
-                  <span className="size-xxl"> I love to </span>
+                  <span className="size-xxl"> I </span>
                   <span className="size-xxl">
                     <Typed
                       strings={[' code.', 'break code.']}
@@ -82,20 +83,7 @@ class About extends React.Component {
         <Projects />
         <Experiences />
         <Skills />
-        <p class="contact to-render">
-          You can contact me at{' '}
-          <a href="mailto:luan.p.tran@gmail.com" target="_blank">
-            luan.p.tran@gmail.com
-          </a>
-          , visit my{' '}
-          <a href="http://linkedin.com/in/luanptran" target="_blank">
-            LinkedIn profile
-          </a>
-          , or visit my{' '}
-          <a target="_blank" href="http://github.com/luantran96/">
-            Github.
-          </a>
-        </p>
+        <Footer />
       </>
     );
   }
